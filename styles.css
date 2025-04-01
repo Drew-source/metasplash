@@ -1617,3 +1617,176 @@ body .footer-bottom {
 /* Removed Emergency Fix for Footer Bullets section */
 
 /* Removed Super-specific overrides for new class names section */
+
+/* Language Switcher Styles */
+.language-switcher {
+    margin-left: 1.5rem; /* Adjust spacing if needed */
+    display: flex;
+    align-items: center; /* Vertically align label/select */
+}
+
+/* Basic styling for the dropdown */
+#lang-select {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--light-gray);
+    background-color: var(--white);
+    color: var(--dark);
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-family: inherit; /* Use body font */
+    appearance: none; /* Remove default OS styling */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E"); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    padding-right: 1.8rem; /* Make space for arrow */
+    transition: border-color 0.2s ease;
+}
+
+#lang-select:hover {
+    border-color: var(--gold);
+}
+
+#lang-select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(201, 177, 140, 0.1);
+}
+
+/* Hide label visually but keep for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Accessibility */
+body.user-is-tabbing *:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* ------------------------ */
+/* --- RTL Adjustments --- */
+/* ------------------------ */
+
+html[dir="rtl"] body {
+    text-align: right; /* Default text alignment for RTL */
+}
+
+/* Reverse flex containers unless explicitly marked otherwise */
+html[dir="rtl"] .d-flex:not(.no-rtl-reverse),
+html[dir="rtl"] .flex-row:not(.no-rtl-reverse) {
+    flex-direction: row-reverse;
+}
+html[dir="rtl"] .flex-row-reverse:not(.no-rtl-reverse) {
+    flex-direction: row;
+}
+
+/* Adjust margins/paddings (Example - needs specific targeting) */
+html[dir="rtl"] .mr-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+html[dir="rtl"] .ml-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+html[dir="rtl"] .pl-3 { /* Example for padding-left */
+    padding-left: 0;
+    padding-right: 1rem; /* Adjust value as needed */
+}
+html[dir="rtl"] .pr-3 { /* Example for padding-right */
+    padding-right: 0;
+    padding-left: 1rem; /* Adjust value as needed */
+}
+
+/* Specific Component Adjustments (Examples) */
+html[dir="rtl"] header nav .nav-links {
+    /* If using flex, direction might be reversed automatically */
+    /* If using float or other layout, specific rules needed */
+    margin-left: 0;
+    margin-right: auto; /* Push links to the left */
+}
+
+html[dir="rtl"] .language-switcher {
+    margin-left: 1rem; /* Add space to the right */
+    margin-right: 0;
+}
+
+html[dir="rtl"] .logo {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+html[dir="rtl"] .resource-item .resource-icon {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+html[dir="rtl"] .resource-item .resource-btn i {
+    transform: scaleX(-1); /* Flip arrow */
+}
+
+html[dir="rtl"] .testimonial-item {
+    /* Assuming flex, reverse direction */
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .contact-info .contact-item {
+    /* Assuming flex, reverse direction */
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .contact-info .contact-icon {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+html[dir="rtl"] .contact-info .contact-social a {
+    margin: 0 5px 0 0; /* Adjust social icon spacing */
+}
+
+html[dir="rtl"] .form-type-toggle button:first-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+html[dir="rtl"] .form-type-toggle button:last-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+html[dir="rtl"] .checkbox-label input[type="checkbox"] {
+    margin-right: 0;
+    margin-left: 0.5em;
+}
+
+html[dir="rtl"] .footer-content {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .footer-bottom {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+html[dir="rtl"] .modal-header {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .modal-close {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Add more specific rules as needed based on testing */
