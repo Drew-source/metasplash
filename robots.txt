@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /assets/images/
+Allow: /assets/pdfs/
+Disallow: /api/
+Disallow: /leads/
+Disallow: /contacts/
+
+Sitemap: https://metaesthetics.com/sitemap.xml 

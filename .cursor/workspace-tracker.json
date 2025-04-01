@@ -1,0 +1,640 @@
+{
+  "last_updated": "2024-04-02T16:45:00",
+  "workspace_root": "Metaesthetics",
+  "project_type": "web_application",
+  "performance_metrics": {
+    "lighthouse": {
+      "seo": 100,
+      "accessibility": 98,
+      "performance": "optimized",
+      "best_practices": "implemented"
+    }
+  },
+  "dependencies": {
+    "frontend": {
+      "framework": "vanilla",
+      "styles": "custom CSS",
+      "key_features": [
+        "modern toggle switch",
+        "responsive design",
+        "animations",
+        "contact form system",
+        "modal system",
+        "legal documents",
+        "optimized scroll handling",
+        "lazy loading",
+        "optimized font loading",
+        "resource preloading",
+        "improved form accessibility"
+      ],
+      "performance_optimizations": {
+        "image_loading": {
+          "techniques": ["lazy loading", "preloading critical images"],
+          "implementation": "loading='lazy' attribute"
+        },
+        "font_loading": {
+          "techniques": ["preload", "display swap", "DNS prefetch"],
+          "implementation": "preload with onload handler"
+        },
+        "css_performance": {
+          "techniques": [
+            "will-change hints",
+            "transform animations",
+            "backface-visibility",
+            "hardware acceleration",
+            "optimized form styles",
+            "specificity management"
+          ]
+        },
+        "resource_loading": {
+          "techniques": [
+            "DNS prefetch",
+            "preload critical resources",
+            "optimized loading order"
+          ]
+        }
+      }
+    },
+    "backend": {
+      "language": "python",
+      "server": "http.server",
+      "data_storage": "file-based JSON",
+      "endpoints": [
+        {
+          "path": "/api/submit-lead",
+          "method": "POST",
+          "storage": "leads/*.json"
+        },
+        {
+          "path": "/api/submit-contact",
+          "method": "POST",
+          "storage": "contacts/*.json"
+        }
+      ],
+      "storage_structure": {
+        "leads": {
+          "format": "JSON",
+          "pattern": "{type}_leads_{date}.json"
+        },
+        "contacts": {
+          "format": "JSON",
+          "pattern": "contacts_{date}.json"
+        }
+      }
+    }
+  },
+  "structure": {
+    "type": "directory",
+    "name": "Metaesthetics",
+    "description": "Splash page for Metaesthetics beauty analysis platform",
+    "children": [
+      {
+        "type": "file",
+        "name": "script.js",
+        "size": "9.4KB",
+        "lines": 315,
+        "last_modified": "2024-04-02T15:30:00",
+        "features": [
+          "form validation",
+          "refined toggle system",
+          "animations",
+          "mobile menu",
+          "optimized scroll behavior",
+          "contact form handling",
+          "modal system",
+          "accessibility features"
+        ],
+        "performance_optimizations": {
+          "scroll_handling": {
+            "techniques": [
+              "requestAnimationFrame",
+              "event throttling",
+              "passive event listeners",
+              "scroll threshold detection"
+            ],
+            "benefits": [
+              "smooth fast scrolling",
+              "reduced CPU usage",
+              "improved frame rate",
+              "better battery life"
+            ]
+          },
+          "modal_system": {
+            "techniques": [
+              "event delegation",
+              "transform animations",
+              "will-change optimization"
+            ]
+          },
+          "toggle_system": {
+            "techniques": [
+              "simplified DOM manipulation",
+              "optimized state transitions",
+              "aria attributes for accessibility"
+            ]
+          }
+        },
+        "dependencies": [],
+        "exports": [
+          "handleFormSubmit",
+          "validateForm",
+          "createMobileMenu"
+        ],
+        "event_handlers": {
+          "scroll": {
+            "type": "throttled",
+            "threshold": "50px",
+            "optimization": "requestAnimationFrame"
+          },
+          "modals": [
+            "click (open)",
+            "click (close)",
+            "click outside",
+            "escape key"
+          ],
+          "forms": [
+            "submit",
+            "validation",
+            "toggle"
+          ]
+        }
+      },
+      {
+        "type": "file",
+        "name": "index.html",
+        "size": "12.4KB",
+        "lines": 381,
+        "last_modified": "2024-04-02T15:30:00",
+        "sections": [
+          "hero",
+          "features",
+          "testimonials",
+          "signup form",
+          "contact form",
+          "modals",
+          "footer"
+        ],
+        "forms": [
+          {
+            "id": "signup-form",
+            "variants": ["patient", "clinic"],
+            "toggle": "modern pill switch"
+          },
+          {
+            "id": "contact-form",
+            "fields": ["name", "email", "subject", "message"]
+          }
+        ],
+        "modals": [
+          {
+            "id": "privacy-modal",
+            "type": "legal",
+            "content": "privacy policy",
+            "sections": [
+              "Data Collection and Use",
+              "Data Protection",
+              "Your Rights",
+              "Contact Us"
+            ]
+          },
+          {
+            "id": "terms-modal",
+            "type": "legal",
+            "content": "terms of service",
+            "sections": [
+              "Acceptance of Terms",
+              "Service Description",
+              "User Responsibilities",
+              "Healthcare Providers",
+              "Limitation of Liability",
+              "Changes to Terms"
+            ]
+          }
+        ],
+        "dependencies": {
+          "external_css": ["Font Awesome 6.5.1"],
+          "fonts": ["Montserrat", "Open Sans"],
+          "scripts": ["script.js"]
+        }
+      },
+      {
+        "type": "file",
+        "name": "styles.css",
+        "size": "9.4KB",
+        "lines": 1401,
+        "last_modified": "2024-04-02T15:30:00",
+        "components": [
+          "header",
+          "hero",
+          "features",
+          "testimonials",
+          "modern toggle switch",
+          "form",
+          "animations",
+          "contact section",
+          "modals"
+        ],
+        "performance_optimizations": {
+          "animations": {
+            "techniques": [
+              "transform instead of position",
+              "will-change property",
+              "hardware acceleration",
+              "cubic-bezier timing"
+            ],
+            "benefits": [
+              "reduced layout thrashing",
+              "smoother animations",
+              "better GPU utilization"
+            ]
+          },
+          "css_specificity": {
+            "techniques": [
+              "high-specificity selectors for overrides",
+              "important flags for critical styles",
+              "namespace isolation"
+            ],
+            "benefits": [
+              "reduced style conflicts",
+              "more predictable rendering",
+              "easier maintenance"
+            ]
+          }
+        },
+        "media_queries": [
+          "mobile",
+          "tablet",
+          "desktop"
+        ],
+        "animations": [
+          "modal slide-in",
+          "button hover",
+          "form transitions",
+          "header slide"
+        ],
+        "variables": {
+          "colors": [
+            "--gold: #C9B18C",
+            "--beige: #F8F5F1",
+            "--dark: #333333",
+            "--gray: #666666",
+            "--light-gray: #dddddd",
+            "--white: #ffffff",
+            "--success: #28a745"
+          ],
+          "other": [
+            "--shadow-large",
+            "--shadow-small"
+          ]
+        }
+      },
+      {
+        "type": "directory",
+        "name": "leads",
+        "children": [],
+        "purpose": "Storage for waitlist form submissions",
+        "expected_files": "{patient|clinic}_leads_{YYYY-MM-DD}.json",
+        "structure": {
+          "type": "JSON",
+          "fields": [
+            "name",
+            "email",
+            "formType",
+            "interest (patient only)",
+            "clinicName (clinic only)",
+            "location (clinic only)",
+            "consent",
+            "timestamp"
+          ]
+        }
+      },
+      {
+        "type": "directory",
+        "name": "contacts",
+        "children": [],
+        "purpose": "Storage for contact form submissions",
+        "expected_files": "contacts_{YYYY-MM-DD}.json",
+        "structure": {
+          "type": "JSON",
+          "fields": [
+            "name",
+            "email",
+            "subject",
+            "message",
+            "timestamp"
+          ]
+        }
+      },
+      {
+        "type": "file",
+        "name": "server.py",
+        "size": "4.0KB",
+        "lines": 168,
+        "last_modified": "2024-03-28T12:00:00",
+        "endpoints": [
+          "/api/submit-lead",
+          "/api/submit-contact"
+        ],
+        "dependencies": [
+          "http.server",
+          "json",
+          "urllib.parse",
+          "os",
+          "datetime"
+        ],
+        "features": [
+          "lead capture",
+          "contact form processing",
+          "static file serving",
+          "JSON data storage",
+          "CORS support",
+          "error handling"
+        ],
+        "error_handling": [
+          "400 for invalid requests",
+          "404 for missing resources",
+          "500 for server errors"
+        ],
+        "startup_command": "python server.py"
+      },
+      {
+        "type": "directory",
+        "name": "assets",
+        "purpose": "Static assets storage",
+        "children": [
+          {
+            "type": "directory",
+            "name": "images",
+            "purpose": "Image assets for the splash page",
+            "children": [
+              {
+                "type": "file",
+                "name": "MetaLogo.png",
+                "size": "39KB",
+                "last_modified": "2024-03-28T12:08:00",
+                "purpose": "Brand logo",
+                "format": "PNG",
+                "dimensions": "logo image"
+              },
+              {
+                "type": "file",
+                "name": "hero-image.png",
+                "size": "801KB",
+                "last_modified": "2024-03-28T12:08:00",
+                "purpose": "Main hero section background",
+                "format": "PNG",
+                "dimensions": "hero image"
+              },
+              {
+                "type": "file",
+                "name": "ai-analysis.png",
+                "size": "17KB",
+                "last_modified": "2024-03-28T12:08:00",
+                "purpose": "AI analysis feature illustration",
+                "format": "PNG",
+                "dimensions": "feature image"
+              },
+              {
+                "type": "file",
+                "name": "expert-matching.png",
+                "size": "30KB",
+                "last_modified": "2024-03-28T12:08:00",
+                "purpose": "Expert matching feature illustration",
+                "format": "PNG",
+                "dimensions": "feature image"
+              },
+              {
+                "type": "file",
+                "name": "seamless-journey.png",
+                "size": "42KB",
+                "last_modified": "2024-03-28T12:08:00",
+                "purpose": "User journey feature illustration",
+                "format": "PNG",
+                "dimensions": "feature image"
+              },
+              {
+                "type": "file",
+                "name": "testimonial1.png",
+                "size": "275KB",
+                "last_modified": "2024-03-28T12:08:00",
+                "purpose": "Patient testimonial photo",
+                "format": "PNG",
+                "dimensions": "testimonial image"
+              },
+              {
+                "type": "file",
+                "name": "testimonial2.png",
+                "size": "266KB",
+                "last_modified": "2024-03-28T12:08:00",
+                "purpose": "Doctor testimonial photo",
+                "format": "PNG",
+                "dimensions": "testimonial image"
+              },
+              {
+                "type": "file",
+                "name": "README.md",
+                "size": "869B",
+                "lines": 31,
+                "last_modified": "2024-03-28T11:40:00",
+                "content_type": "documentation",
+                "describes": "image specifications and requirements"
+              }
+            ],
+            "metadata": {
+              "total_images": 7,
+              "formats": ["PNG"],
+              "total_size": "1.47MB",
+              "categories": {
+                "logo": 1,
+                "hero": 1,
+                "features": 3,
+                "testimonials": 2
+              }
+            }
+          },
+          {
+            "type": "directory",
+            "name": "pdfs",
+            "purpose": "PDF resources for clinics and patients",
+            "children": [
+              {
+                "type": "file",
+                "name": "Metaesthetic_Clinic_Book.pdf",
+                "size": "15MB",
+                "last_modified": "2024-03-28T12:08:00",
+                "purpose": "Clinic guide and resources",
+                "format": "PDF"
+              },
+              {
+                "type": "file",
+                "name": "Metaesthetic_Patient_Book.pdf",
+                "size": "9.1MB",
+                "last_modified": "2024-03-28T12:08:00",
+                "purpose": "Patient guide and resources",
+                "format": "PDF"
+              }
+            ],
+            "metadata": {
+              "total_pdfs": 2,
+              "formats": ["PDF"],
+              "total_size": "24.1MB",
+              "categories": {
+                "clinic": 1,
+                "patient": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": ".cursor",
+        "purpose": "Cursor IDE configuration and documentation",
+        "children": [
+          {
+            "type": "directory",
+            "name": "docs",
+            "purpose": "Project documentation",
+            "children": [
+              {
+                "type": "file",
+                "name": "workspace-tracking.md",
+                "content_type": "documentation",
+                "describes": "workspace tracking system",
+                "last_modified": "2024-03-28T11:47:00",
+                "size": "10.5KB",
+                "lines": 395
+              },
+              {
+                "type": "file",
+                "name": "workspace-maintenance.md",
+                "content_type": "documentation",
+                "describes": "maintenance process for keeping workspace tracker in sync",
+                "last_modified": "2024-03-28T11:47:00",
+                "size": "5.2KB",
+                "lines": 211
+              },
+              {
+                "type": "file",
+                "name": "maintenance-log.md",
+                "content_type": "documentation",
+                "describes": "log of maintenance activities and changes",
+                "last_modified": "2024-04-02T15:30:00",
+                "size": "1.3KB",
+                "lines": 44
+              }
+            ]
+          },
+          {
+            "type": "file",
+            "name": "workspace-tracker.json",
+            "self_reference": true,
+            "purpose": "Maintains workspace structure and relationships",
+            "last_modified": "2024-04-02T16:45:00",
+            "size": "15.2KB"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": ".vscode",
+        "purpose": "Editor configuration",
+        "children": [
+          {
+            "type": "file",
+            "name": "settings.json",
+            "purpose": "VS Code editor settings",
+            "size": "0.2KB",
+            "last_modified": "2024-03-28T11:40:00"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "total_files": 17,
+    "total_directories": 8,
+    "last_operation": "update_form_toggle",
+    "last_operation_path": "styles.css"
+  },
+  "relationships": {
+    "frontend_integration": {
+      "form_submission": {
+        "waitlist": {
+          "client": "script.js:handleFormSubmit",
+          "server": "server.py:/api/submit-lead",
+          "storage": "leads/"
+        },
+        "contact": {
+          "client": "script.js:contactForm",
+          "server": "server.py:/api/submit-contact",
+          "storage": "contacts/"
+        }
+      },
+      "modal_system": {
+        "triggers": "footer legal links",
+        "handlers": "script.js:modal event listeners",
+        "styles": "styles.css:modal styles"
+      },
+      "toggle_switch": {
+        "markup": "index.html:form-type-toggle",
+        "styles": "styles.css:toggle-btn styles",
+        "handlers": "script.js:toggleBtns event listeners"
+      }
+    }
+  },
+  "documentation": {
+    "location": ".cursor/docs/",
+    "files": [
+      {
+        "name": "workspace-tracking.md",
+        "purpose": "Explains the workspace tracking system",
+        "last_modified": "2024-03-28T11:47:00"
+      },
+      {
+        "name": "workspace-maintenance.md",
+        "purpose": "Details maintenance process for the tracker",
+        "last_modified": "2024-03-28T11:47:00"
+      },
+      {
+        "name": "maintenance-log.md",
+        "purpose": "Logs maintenance activities and changes",
+        "last_modified": "2024-04-02T15:30:00"
+      }
+    ]
+  },
+  "features_status": {
+    "waitlist_form": "complete",
+    "contact_form": "complete",
+    "form_toggle": "complete",
+    "legal_modals": "complete",
+    "responsive_design": "complete",
+    "accessibility": "complete",
+    "scroll_performance": "optimized",
+    "pdf_resources": "complete"
+  },
+  "performance_targets": {
+    "lighthouse": {
+      "performance": "≥ 90",
+      "accessibility": "100",
+      "best_practices": "100",
+      "seo": "100"
+    },
+    "metrics": {
+      "fcp": "< 1.8s",
+      "lcp": "< 2.5s",
+      "cls": "< 0.1",
+      "fid": "< 100ms",
+      "ttfb": "< 0.8s"
+    },
+    "optimizations_applied": [
+      "image optimization",
+      "scroll performance",
+      "animation efficiency",
+      "modal system",
+      "form handling",
+      "toggle switch refinement",
+      "css specificity management"
+    ]
+  }
+} 
