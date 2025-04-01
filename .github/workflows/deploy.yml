@@ -1,0 +1,36 @@
+name: Deploy to GCP VM
+
+# Trigger deployment on push events to the main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    # Use the latest Ubuntu runner provided by GitHub
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the repository code
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Step 2: Deploy code to server via SSH
+    - name: Deploy to Server
+      # Use a popular action for SSH commands
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        # Get connection details from GitHub secrets
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22 # Standard SSH port
+
+        # Commands to run on the VM after connecting
+        script: |
+          cd /home/${{ secrets.SSH_USER }}/metasplash
+          git pull origin main
+          echo "Restarting metasplash service..."
+          sudo systemctl restart metasplash.service
+          echo "Deployment complete!"
